@@ -1,0 +1,8 @@
+<button
+  [ngClass]="buttonClasses"
+  [disabled]="disabled"
+  (click)="onClick($event)"
+>
+  <img *ngIf="imageUrl" [src]="imageUrl" class="btn-image" />
+  <ng-content></ng-content>
+</button>
