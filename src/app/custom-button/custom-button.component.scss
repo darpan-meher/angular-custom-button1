@@ -6,7 +6,7 @@
 }
 
 .custom-btn-primary {
-  @include button-theme(); // Applies the default theme variables
+  @include button-theme();
 }
 
 .custom-btn-secondary {
@@ -19,7 +19,7 @@
 
 .custom-btn-outline {
   --btn-bg: transparent;
-  --btn-color: var(--btn-border-color); /* Text color matches border color */
+  --btn-color: var(--btn-border-color);
   --btn-hover-bg: var(--btn-bg);
   --btn-hover-color: #fff;
   @include button-theme(

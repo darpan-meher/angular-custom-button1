@@ -1,16 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-
-  onPrimaryClick(){
-    console.log('Primary button clicked');
-  }
-  onSuccessClick(){
-    console.log('Success button clicked');
+  onButtonClick(event: any) {
+    console.log(event?.target?.innerText + " is clicked");
   }
 }

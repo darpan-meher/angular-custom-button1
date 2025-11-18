@@ -7,6 +7,7 @@ import {
   ElementRef,
   AfterViewInit,
 } from "@angular/core";
+import { ColorVariant, Size } from "./custom-button.model";
 
 @Component({
   selector: "app-custom-button",
@@ -15,20 +16,10 @@ import {
 })
 export class CustomButtonComponent implements AfterViewInit {
   @ViewChild("customButton") customButtonRef!: ElementRef;
-  @Input() type:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "light"
-    | "dark"
-    | "link" = "primary";
-  @Input() size: "sm" | "lg" | "" = ""; // Bootstrap sizes: sm, lg, or empty for default
+  @Input() type: ColorVariant = "primary";
+  @Input() size: Size = "";
   @Input() outline: boolean = false;
   @Input() disabled: boolean = false;
-  @Input() block: boolean = false; // For full-width block buttons
   @Input() imageUrl: string = "";
   @Input() imageAlt: string = "";
   @Input() customTheme: boolean = false; // enable/disable bootstrap styling

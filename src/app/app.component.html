@@ -5,42 +5,42 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Variants</h5>
-        <app-custom-button type="primary" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="primary" (buttonClick)="onButtonClick($event)">
           Primary
         </app-custom-button>
 
-        <app-custom-button type="success" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="success" (buttonClick)="onButtonClick($event)">
           Success
         </app-custom-button>
 
-        <app-custom-button type="danger" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="danger" (buttonClick)="onButtonClick($event)">
           Danger
         </app-custom-button>
 
-        <app-custom-button type="warning" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="warning" (buttonClick)="onButtonClick($event)">
           Warning
         </app-custom-button>
 
-        <app-custom-button type="info" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="info" (buttonClick)="onButtonClick($event)">
           Info
         </app-custom-button>
 
-        <app-custom-button type="light" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="light" (buttonClick)="onButtonClick($event)">
           light
         </app-custom-button>
 
-        <app-custom-button type="dark" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="dark" (buttonClick)="onButtonClick($event)">
           dark
         </app-custom-button>
 
-        <app-custom-button type="link" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="link" (buttonClick)="onButtonClick($event)">
           link
         </app-custom-button>
 
         <app-custom-button
           type="primary"
           imageUrl="./assets/logo.png"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           With Image
         </app-custom-button>
@@ -53,7 +53,7 @@
         <app-custom-button
           type="primary"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           Primary
         </app-custom-button>
@@ -61,7 +61,7 @@
         <app-custom-button
           type="success"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           Success
         </app-custom-button>
@@ -69,7 +69,7 @@
         <app-custom-button
           type="danger"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           Danger
         </app-custom-button>
@@ -77,7 +77,7 @@
         <app-custom-button
           type="warning"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           Warning
         </app-custom-button>
@@ -85,7 +85,7 @@
         <app-custom-button
           type="info"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           Info
         </app-custom-button>
@@ -93,7 +93,7 @@
         <app-custom-button
           type="light"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           light
         </app-custom-button>
@@ -101,7 +101,7 @@
         <app-custom-button
           type="dark"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           dark
         </app-custom-button>
@@ -109,7 +109,7 @@
         <app-custom-button
           type="link"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           link
         </app-custom-button>
@@ -118,7 +118,7 @@
           type="primary"
           imageUrl="./assets/logo.png"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           With Image
         </app-custom-button>
@@ -149,19 +149,19 @@
         <app-custom-button
           type="primary"
           size="sm"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           small button
         </app-custom-button>
 
-        <app-custom-button type="primary" (buttonClick)="onPrimaryClick()">
+        <app-custom-button type="primary" (buttonClick)="onButtonClick($event)">
           medium button
         </app-custom-button>
 
         <app-custom-button
           type="primary"
           size="lg"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           large button
         </app-custom-button>
@@ -174,7 +174,7 @@
         <app-custom-button
           type="primary"
           [customTheme]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           custom primary button
         </app-custom-button>
@@ -182,7 +182,7 @@
         <app-custom-button
           [customTheme]="true"
           data-theme="dark"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           custom Dark theme button
         </app-custom-button>
@@ -190,7 +190,7 @@
         <app-custom-button
           type="secondary"
           [customTheme]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           custom secondary button
         </app-custom-button>
@@ -199,7 +199,7 @@
           type="secondary"
           [customTheme]="true"
           [outline]="true"
-          (buttonClick)="onPrimaryClick()"
+          (buttonClick)="onButtonClick($event)"
         >
           custom outline button
         </app-custom-button>
