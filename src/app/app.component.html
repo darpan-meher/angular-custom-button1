@@ -154,10 +154,7 @@
           small button
         </app-custom-button>
 
-        <app-custom-button
-          type="primary"
-          (buttonClick)="onPrimaryClick()"
-        >
+        <app-custom-button type="primary" (buttonClick)="onPrimaryClick()">
           medium button
         </app-custom-button>
 
@@ -168,7 +165,19 @@
         >
           large button
         </app-custom-button>
+      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Custom styles</h5>
+        <app-custom-button
+          type="primary"
+          [customTheme]="true"
+          (buttonClick)="onPrimaryClick()"
+        >
+          custom button
+        </app-custom-button>
       </div>
     </div>
   </div>

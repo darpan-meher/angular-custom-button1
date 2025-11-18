@@ -1,27 +1,36 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+} from "@angular/core";
 
 @Component({
-  selector: 'app-custom-button',
-  templateUrl: './custom-button.component.html',
-  styleUrls: ['./custom-button.component.scss'],
+  selector: "app-custom-button",
+  templateUrl: "./custom-button.component.html",
+  styleUrls: ["./custom-button.component.scss"],
 })
-export class CustomButtonComponent {
+export class CustomButtonComponent implements AfterViewInit {
+  @ViewChild("customButton") customButtonRef!: ElementRef;
   @Input() type:
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'danger'
-    | 'warning'
-    | 'info'
-    | 'light'
-    | 'dark'
-    | 'link' = 'primary';
-  @Input() size: 'sm' | 'lg' | '' = ''; // Bootstrap sizes: sm, lg, or empty for default
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark"
+    | "link" = "primary";
+  @Input() size: "sm" | "lg" | "" = ""; // Bootstrap sizes: sm, lg, or empty for default
   @Input() outline: boolean = false;
   @Input() disabled: boolean = false;
   @Input() block: boolean = false; // For full-width block buttons
-  @Input() imageUrl: string = '';
-  @Input() imageAlt: string = '';
+  @Input() imageUrl: string = "";
+  @Input() imageAlt: string = "";
   @Input() customTheme: boolean = false; // enable/disable bootstrap styling
   @Output() buttonClick = new EventEmitter<Event>();
 
@@ -31,29 +40,32 @@ export class CustomButtonComponent {
     }
   }
 
-  get buttonClasses(): string {
-    let classes = '';
+  ngAfterViewInit(): void {
+    this.appendClasses();
+  }
+
+  appendClasses() {
+    let classes = this.customButtonRef.nativeElement.classList;
     if (this.customTheme) {
-      classes = 'custom-btn';
+      classes.add("btn-bd-primary");
       if (this.outline) {
-        classes += ` outline-${this.type}`;
+        classes.add(` outline-${this.type}`);
       } else {
-        classes += ` custom-${this.type}`;
+        classes.add(` custom-${this.type}`);
       }
     } else {
-      classes = 'btn';
+      classes.add("btn");
       if (this.outline) {
-        classes += ` btn-outline-${this.type}`;
+        classes.add(`btn-outline-${this.type}`);
       } else {
-        classes += ` btn-${this.type}`;
+        classes.add(`btn-${this.type}`);
       }
       if (this.size) {
-        classes += ` btn-${this.size}`;
+        classes.add(`btn-${this.size}`);
       }
     }
     if (this.block) {
-      classes += ' btn-block';
+      classes.add(`btn-block`);
     }
-    return classes;
   }
 }
