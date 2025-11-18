@@ -1,0 +1,18 @@
+@mixin button-theme($bg-var: var(--btn-bg), $color-var: var(--btn-color), $hover-bg-var: var(--btn-hover-bg), $hover-border-var: var(--btn-hover-border-color)) {
+  display: inline-block;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid $bg-var;
+
+  background-color: $bg-var;
+  color: $color-var;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-bg-var;
+    border-color: $hover-border-var;
+  }
+}

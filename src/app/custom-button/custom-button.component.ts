@@ -47,11 +47,10 @@ export class CustomButtonComponent implements AfterViewInit {
   appendClasses() {
     let classes = this.customButtonRef.nativeElement.classList;
     if (this.customTheme) {
-      classes.add("btn-bd-primary");
       if (this.outline) {
-        classes.add(` outline-${this.type}`);
+        classes.add(`custom-btn-outline`);
       } else {
-        classes.add(` custom-${this.type}`);
+        classes.add(`custom-btn-${this.type}`);
       }
     } else {
       classes.add("btn");
@@ -63,9 +62,6 @@ export class CustomButtonComponent implements AfterViewInit {
       if (this.size) {
         classes.add(`btn-${this.size}`);
       }
-    }
-    if (this.block) {
-      classes.add(`btn-block`);
     }
   }
 }

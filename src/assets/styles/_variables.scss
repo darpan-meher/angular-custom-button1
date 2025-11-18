@@ -1,0 +1,19 @@
+:root {
+  /* Default Theme Variables */
+  --btn-bg: #6510d5; /* Primary background color */
+  --btn-color: #fff; /* Text color */
+  --btn-border-color: #9a78e3;
+  --btn-hover-bg: #a75ce4;
+  --btn-hover-border-color: #ae4aec;
+  --btn-padding: 10px 20px;
+  --btn-border-radius: 5px;
+}
+
+/* Example of a 'Dark' Theme (override variables within a specific selector) */
+[data-theme="dark"] {
+  --btn-bg: #343a40;
+  --btn-color: #fff;
+  --btn-border-color: #343a40;
+  --btn-hover-bg: #1d2124;
+  --btn-hover-border-color: #1d2124;
+}
